@@ -12,10 +12,10 @@ Este projeto implementa um sistema de comunicação **Full-Duplex** entre dois d
 
 ## 🔗 Repositório Complementar
 
-⚠️ **ATENÇÃO:** Este repositório contém o código para a **Placa A**.
+⚠️ **ATENÇÃO:** Este repositório contém o código para a **Placa B**.
 
 Para o sistema funcionar completamente com dois ESP32, você precisa gravar o código complementar na segunda placa.
-* **Acesse o repositório da Placa B aqui:** [COLE_O_LINK_DO_OUTRO_REPOSITORIO_AQUI]
+* **Acesse o repositório da Placa A aqui:** https://github.com/joelrodriguesvieira/mqtt
 
 ---
 
