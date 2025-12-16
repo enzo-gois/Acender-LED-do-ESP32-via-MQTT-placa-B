@@ -1,6 +1,6 @@
 # Comunicação Bidirecional MQTT com ESP32
 
-Este projeto implementa um sistema de comunicação **Full-Duplex** entre dois dispositivos ESP32. O objetivo é o espelhamento de estado: um botão pressionado na **Placa A** acende o LED na **Placa B**, e vice-versa.
+Este projeto implementa um sistema de comunicação **Full-Duplex** entre dois dispositivos ESP32. O objetivo é o espelhamento de estado: um botão pressionado na **Placa 1** acende o LED na **Placa 2**, e vice-versa.
 
 ## 👥 Membros da Equipe
 * **Joel Rodrigues**
@@ -12,10 +12,10 @@ Este projeto implementa um sistema de comunicação **Full-Duplex** entre dois d
 
 ## 🔗 Repositório Complementar
 
-⚠️ **ATENÇÃO:** Este repositório contém o código para a **Placa B**.
+⚠️ **ATENÇÃO:** Este repositório contém o código para a **Placa 2**.
 
 Para o sistema funcionar completamente com dois ESP32, você precisa gravar o código complementar na segunda placa.
-* **Acesse o repositório da Placa A aqui:** https://github.com/joelrodriguesvieira/mqtt
+* **Acesse o repositório da Placa 1 aqui:** https://github.com/joelrodriguesvieira/mqtt
 
 ---
 
@@ -103,14 +103,14 @@ Para que os dois ESP32 conversem, é necessário configurar o endereço do servi
 
 ## 🚀 Como Executar
 
-### Passo 1: Gravar a Placa A (Este Repositório)
+### Passo 1: Gravar a Placa 2 (Este Repositório)
 1. Configure o Wi-Fi: `idf.py menuconfig` -> *Example Connection Configuration*.
 2. Compile e grave:
    ```bash
    idf.py -p (PORTA_USB) flash monitor
    ```
 
-### Passo 2: Gravar a Placa B (Outro Repositório)
+### Passo 2: Gravar a Placa 1 (Outro Repositório)
 1. Baixe o código do repositório complementar (link no topo).
 2. Configure o Wi-Fi e o IP nele também.
 3. Grave na segunda placa.
@@ -124,14 +124,14 @@ Com ambos os códigos gravados e as placas ligadas (alimentadas via USB):
 1. **Verificação Inicial:**
    * Certifique-se de que ambas as placas conectaram ao Wi-Fi e ao Broker MQTT (o LED da placa pode piscar ou você pode verificar via monitor serial se aparece `MQTT_EVENT_CONNECTED`).
 
-2. **Teste A -> B:**
-   * Pressione o botão na **Placa A**.
-   * O LED na **Placa B** deve acender **instantaneamente**.
-   * Solte o botão na **Placa A**. O LED na **Placa B** deve apagar.
+2. **Teste 1 -> 2:**
+   * Pressione o botão na **Placa 1**.
+   * O LED na **Placa 2** deve acender **instantaneamente**.
+   * Solte o botão na **Placa 1**. O LED na **Placa 2** deve apagar.
 
-3. **Teste B -> A:**
-   * Pressione o botão na **Placa B**.
-   * O LED na **Placa A** deve acender **instantaneamente**.
+3. **Teste 2 -> 1:**
+   * Pressione o botão na **Placa 2**.
+   * O LED na **Placa 1** deve acender **instantaneamente**.
 
 ---
 
