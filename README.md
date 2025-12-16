@@ -31,7 +31,7 @@ De início, criamos variáveis importantes que definem o comportamento do hardwa
 #define TAG "MQTT_LED"
 #define BROKER_URI "mqtt://192.168.3.6:1883" 
 #define LED_GPIO     23
-#define BUTTON_GPIO  0 
+#define BUTTON_GPIO  22 
 
 static esp_mqtt_client_handle_t mqtt_client = NULL;
 ```
